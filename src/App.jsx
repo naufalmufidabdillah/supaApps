@@ -32,7 +32,14 @@ function App() {
   }
 
   return (
-    <>HELLO WORLD</>
+    <div>
+      <h1>Product List</h1>
+      <ul>
+        {products && products.map((item, idx) => (
+          <li key={idx}>{JSON.stringify(item)}</li>
+        ))}
+      </ul>
+    </div>
   )
 }
 
