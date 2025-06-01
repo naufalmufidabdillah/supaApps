@@ -10,7 +10,7 @@ function App() {
   const [products, setProducts] = useState([])
 
   useEffect(() => {
-    API()``
+    API()
   }, []);
   async function API (){
     const { data, error } = await supabase
