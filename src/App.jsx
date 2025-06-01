@@ -36,15 +36,41 @@ function App() {
   }
 
   return (
-    <div>
+    <div id="root">
       <h1>Product List</h1>
-      <ul>
-        {products && products.map((item, idx) => (
-          <li key={idx}>
-            {item.product_name} ({item.category_name}) - ${item.price}
-          </li>
-        ))}
-      </ul>
+      <div style={{ overflowX: 'auto' }}>
+        <table style={{
+          margin: '0 auto',
+          borderCollapse: 'collapse',
+          width: '100%',
+          maxWidth: '600px',
+          background: '#fff',
+          borderRadius: '8px',
+          boxShadow: '0 2px 8px rgba(0,0,0,0.05)'
+        }}>
+          <thead>
+            <tr style={{ background: '#4f46e5', color: '#fff' }}>
+              <th style={{ padding: '12px', borderRadius: '8px 0 0 0' }}>Product</th>
+              <th style={{ padding: '12px' }}>Category</th>
+              <th style={{ padding: '12px', borderRadius: '0 8px 0 0' }}>Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            {products.map((item) => (
+              <tr key={item.id}>
+                <td style={{ padding: '10px', borderBottom: '1px solid #eee' }}>{item.product_name}</td>
+                <td style={{ padding: '10px', borderBottom: '1px solid #eee' }}>{item.category_name}</td>
+                <td style={{ padding: '10px', borderBottom: '1px solid #eee' }}>${item.price}</td>
+              </tr>
+            ))}
+            {products.length === 0 && (
+              <tr>
+                <td colSpan="3" style={{ padding: '20px', color: '#888' }}>No products found.</td>
+              </tr>
+            )}
+          </tbody>
+        </table>
+      </div>
     </div>
   )
 }
