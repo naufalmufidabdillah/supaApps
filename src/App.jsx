@@ -3,7 +3,7 @@ import { createClient } from '@supabase/supabase-js'
 import './App.css'
 
 // Create a single supabase client for interacting with your database
-const supabase = createClient('https://unnqhvjejdzjhzckxtxe.supabase.co', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVubnFodmplamR6amh6Y2t4dHhlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDc2NDE2NzAsImV4cCI6MjA2MzIxNzY3MH0.YDpR-B_WqioBtPJUiXt6MA0HBh6wl_Krdzh2dVqde_s')
+const supabase = createClient('https://gszstjwhasiwinfmslts.supabase.co', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdzenN0andoYXNpd2luZm1zbHRzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDc2NDAwNDksImV4cCI6MjA2MzIxNjA0OX0.TMzO-M2SroZKrWOkoU44-UTEPI1mR275Hsh_KIXVCTI')
 
 
 function App() {
@@ -20,11 +20,11 @@ function App() {
     // console.log(data)
   }
   function APImanual(){
-    fetch("https://unnqhvjejdzjhzckxtxe.supabase.co/rest/v1/product_with_category", {
+    fetch("https://gszstjwhasiwinfmslts.supabase.co/rest/v1/product_with_category", {
       method: 'GET',
       headers: {
-        'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVubnFodmplamR6amh6Y2t4dHhlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDc2NDE2NzAsImV4cCI6MjA2MzIxNzY3MH0.YDpR-B_WqioBtPJUiXt6MA0HBh6wl_Krdzh2dVqde_s',
-        'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVubnFodmplamR6amh6Y2t4dHhlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDc2NDE2NzAsImV4cCI6MjA2MzIxNzY3MH0.YDpR-B_WqioBtPJUiXt6MA0HBh6wl_Krdzh2dVqde_s',
+        'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdzenN0andoYXNpd2luZm1zbHRzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDc2NDAwNDksImV4cCI6MjA2MzIxNjA0OX0.TMzO-M2SroZKrWOkoU44-UTEPI1mR275Hsh_KIXVCTI',
+        'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdzenN0andoYXNpd2luZm1zbHRzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDc2NDAwNDksImV4cCI6MjA2MzIxNjA0OX0.TMzO-M2SroZKrWOkoU44-UTEPI1mR275Hsh_KIXVCTI',
       }
     })
     .then(response => {
